@@ -5,73 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>John Doe - Android & Flutter Developer</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1>John Doe</h1>
-        <p>Android & Flutter Developer</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="container">
+            <h1>John Doe</h1>
+            <p>Android & Flutter Developer</p>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate Android and Flutter developer with experience building beautiful and efficient mobile applications. I specialize in UI design, state management, and backend integration.</p>
+    <section id="about" class="fade-in">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a passionate Android and Flutter developer with expertise in creating engaging and user-friendly mobile applications that are both scalable and performant.</p>
+        </div>
     </section>
 
-    <section id="skills">
-        <h2>My Skills</h2>
-        <div class="skills-grid">
-            <div class="skill">
-                <h3>Android Development</h3>
-                <ul>
-                    <li>Java & Kotlin</li>
-                    <li>MVVM Architecture</li>
-                    <li>Jetpack Compose</li>
-                    <li>Firebase & REST APIs</li>
-                </ul>
-            </div>
-            <div class="skill">
-                <h3>Flutter Development</h3>
-                <ul>
-                    <li>Dart Programming</li>
-                    <li>State Management (Provider, Bloc)</li>
-                    <li>Animations & Widgets</li>
-                    <li>Cross-platform apps</li>
-                </ul>
+    <section id="skills" class="fade-in">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Android Development</h3>
+                    <ul>
+                        <li>Java & Kotlin</li>
+                        <li>MVVM Architecture</li>
+                        <li>Jetpack Compose</li>
+                        <li>Firebase & REST APIs</li>
+                    </ul>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-code"></i>
+                    <h3>Flutter Development</h3>
+                    <ul>
+                        <li>Dart Programming</li>
+                        <li>State Management (Provider, Bloc)</li>
+                        <li>Animations & Widgets</li>
+                        <li>Cross-platform apps</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <div class="project">
-                <h3>Task Manager App</h3>
-                <p>An Android app to manage daily tasks with notifications and persistence.</p>
-            </div>
-            <div class="project">
-                <h3>E-commerce Flutter App</h3>
-                <p>A cross-platform app for shopping with seamless UI and backend integration.</p>
-            </div>
-            <div class="project">
-                <h3>Social Media App</h3>
-                <p>Developed using Flutter with chat, feed, and user profile features.</p>
+    <section id="projects" class="fade-in">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <h3>Task Manager App</h3>
+                    <p>An Android app to manage daily tasks with notifications and persistence.</p>
+                </div>
+                <div class="project">
+                    <h3>E-commerce Flutter App</h3>
+                    <p>A cross-platform app for shopping with seamless UI and backend integration.</p>
+                </div>
+                <div class="project">
+                    <h3>Social Media App</h3>
+                    <p>Developed using Flutter with chat, feed, and user profile features.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to work together or have any questions, feel free to email me at <a href="mailto:john.doe@example.com">john.doe@example.com</a>.</p>
+    <section id="contact" class="fade-in">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you want to collaborate or have any questions, feel free to email me at <a href="mailto:john.doe@example.com">john.doe@example.com</a>.</p>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 John Doe. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 John Doe. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script>
+        // Fade in animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
