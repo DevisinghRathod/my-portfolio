@@ -3,35 +3,81 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Devisingh Rathore - Android & Flutter Developer portfolio showcasing skills, projects, and contact." />
     <title>Devisingh Rathore - Android & Flutter Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Devisingh Rathore</h1>
-            <p>Android & Flutter Developer</p>
-            <nav>
+    <div id="scrollProgress"></div>
+    <header class="site-header">
+        <div class="container nav-container">
+            <div class="brand">
+                <span class="logo">DR</span>
+                <div class="brand-text">
+                    <h1>Devisingh Rathore</h1>
+                    <p>Android & Flutter Developer</p>
+                </div>
+            </div>
+            <nav class="main-nav">
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
+        <section class="hero fade-in">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h2>Building delightful mobile experiences</h2>
+                    <p>I craft high-performance Android and Flutter apps with clean architecture, smooth animations, and scalable backends.</p>
+                    <div class="cta-group">
+                        <a class="btn primary" href="#projects">View Projects</a>
+                        <a class="btn outline" href="mailto:devisingh341@gmail.com">Hire Me</a>
+                    </div>
+                    <div class="social-links">
+                        <a aria-label="GitHub" href="#" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                        <a aria-label="LinkedIn" href="#" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                        <a aria-label="Twitter" href="#" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="profile-glow">
+                        <img class="profile" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=800&auto=format&fit=crop" alt="Devisingh Rathore portrait"/>
+                    </div>
+                </div>
+            </div>
+        </section>
     </header>
 
     <section id="about" class="fade-in">
         <div class="container">
             <h2>About Me</h2>
             <p>I am a passionate Android and Flutter developer with expertise in creating engaging and user-friendly mobile applications that are both scalable and performant.</p>
+            <div class="about-highlights stagger-container">
+                <div class="highlight">
+                    <span class="num">4+<span class="unit"> yrs</span></span>
+                    <span class="label">Experience</span>
+                </div>
+                <div class="highlight">
+                    <span class="num">20+<span class="unit"> apps</span></span>
+                    <span class="label">Delivered</span>
+                </div>
+                <div class="highlight">
+                    <span class="num">100k+<span class="unit"> users</span></span>
+                    <span class="label">Reached</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="skills" class="fade-in">
         <div class="container">
             <h2>My Skills</h2>
-            <div class="skills-grid">
+            <div class="skills-grid stagger-container">
                 <div class="skill">
                     <i class="fas fa-mobile-alt"></i>
                     <h3>Android Development</h3>
@@ -41,6 +87,12 @@
                         <li>Jetpack Compose</li>
                         <li>Firebase & REST APIs</li>
                     </ul>
+                    <div class="badges stagger-container">
+                        <span class="badge">Room</span>
+                        <span class="badge">Coroutines</span>
+                        <span class="badge">Hilt</span>
+                        <span class="badge">Retrofit</span>
+                    </div>
                 </div>
                 <div class="skill">
                     <i class="fas fa-code"></i>
@@ -51,6 +103,28 @@
                         <li>Animations & Widgets</li>
                         <li>Cross-platform apps</li>
                     </ul>
+                    <div class="badges stagger-container">
+                        <span class="badge">Riverpod</span>
+                        <span class="badge">Freezed</span>
+                        <span class="badge">GoRouter</span>
+                        <span class="badge">Dio</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <i class="fas fa-tools"></i>
+                    <h3>Tools & Practices</h3>
+                    <ul>
+                        <li>Clean Architecture, SOLID</li>
+                        <li>CI/CD (GitHub Actions)</li>
+                        <li>Unit & Widget Testing</li>
+                        <li>Analytics & Crashlytics</li>
+                    </ul>
+                    <div class="badges stagger-container">
+                        <span class="badge">Git</span>
+                        <span class="badge">Figma</span>
+                        <span class="badge">Postman</span>
+                        <span class="badge">Jira</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -59,18 +133,36 @@
     <section id="projects" class="fade-in">
         <div class="container">
             <h2>My Projects</h2>
-            <div class="project-grid">
-                <div class="project">
-                    <h3>Task Manager App</h3>
-                    <p>An Android app to manage daily tasks with notifications and persistence.</p>
+            <div class="project-grid card-grid stagger-container">
+                <div class="project card" data-tilt>
+                    <div class="card-media" style="--bg:url('https://images.unsplash.com/photo-1529336953121-ad5a0d43d0d2?q=80&w=1200&auto=format&fit=crop')"></div>
+                    <div class="card-body">
+                        <h3>Task Manager App</h3>
+                        <p>An Android app to manage daily tasks with notifications and persistence.</p>
+                        <div class="card-actions">
+                            <a class="btn small" href="#">Details</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="project">
-                    <h3>E-commerce Flutter App</h3>
-                    <p>A cross-platform app for shopping with seamless UI and backend integration.</p>
+                <div class="project card" data-tilt>
+                    <div class="card-media" style="--bg:url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop')"></div>
+                    <div class="card-body">
+                        <h3>E-commerce Flutter App</h3>
+                        <p>A cross-platform app for shopping with seamless UI and backend integration.</p>
+                        <div class="card-actions">
+                            <a class="btn small" href="#">Details</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="project">
-                    <h3>Social Media App</h3>
-                    <p>Developed using Flutter with chat, feed, and user profile features.</p>
+                <div class="project card" data-tilt>
+                    <div class="card-media" style="--bg:url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop')"></div>
+                    <div class="card-body">
+                        <h3>Social Media App</h3>
+                        <p>Developed using Flutter with chat, feed, and user profile features.</p>
+                        <div class="card-actions">
+                            <a class="btn small" href="#">Details</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,7 +171,15 @@
     <section id="contact" class="fade-in">
         <div class="container">
             <h2>Contact Me</h2>
-            <p>If you want to collaborate or have any questions, feel free to email me at <a href="mailto:devisingh341@gmail.com">devisingh341@gmail.com</a>.</p>
+            <p>If you want to collaborate or have any questions, feel free to email me at <a href="mailto:devisingh341@gmail.com">devisingh341@gmail.com</a> or use the form below.</p>
+            <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+                <div class="form-row">
+                    <input type="text" name="name" placeholder="Your Name" required />
+                    <input type="email" name="email" placeholder="Email Address" required />
+                </div>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button class="btn primary" type="submit">Send Message</button>
+            </form>
         </div>
     </section>
 
@@ -89,18 +189,84 @@
         </div>
     </footer>
 
+    <button id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
     <script>
-        // Fade in animation on scroll
+        // Smooth reveal on scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    // Staggered children if present
+                    entry.target.querySelectorAll('.stagger-container').forEach(container => {
+                        const children = Array.from(container.children);
+                        children.forEach((el, idx) => {
+                            el.style.transitionDelay = `${Math.min(idx * 80, 600)}ms`;
+                            el.classList.add('stagger-in');
+                        });
+                    });
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.12 });
 
         document.querySelectorAll('.fade-in').forEach(section => {
             observer.observe(section);
+        });
+
+        // Smooth scroll for in-page links
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetId = link.getAttribute('href');
+                if (targetId.length > 1) {
+                    e.preventDefault();
+                    document.querySelector(targetId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Back to top button
+        const backBtn = document.getElementById('backToTop');
+        const toggleBackBtn = () => {
+            if (window.scrollY > 500) backBtn.classList.add('show');
+            else backBtn.classList.remove('show');
+        };
+        window.addEventListener('scroll', toggleBackBtn);
+        backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        toggleBackBtn();
+
+        // Scroll progress bar
+        const progress = document.getElementById('scrollProgress');
+        const updateProgress = () => {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progressPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            progress.style.width = progressPercent + '%';
+        };
+        window.addEventListener('scroll', updateProgress);
+        window.addEventListener('resize', updateProgress);
+        updateProgress();
+
+        // Card tilt interaction
+        const tiltCards = document.querySelectorAll('[data-tilt]');
+        const maxRotate = 8; // deg
+        tiltCards.forEach(card => {
+            let rect;
+            const handleMove = (e) => {
+                rect = rect || card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateY = ((x - centerX) / centerX) * maxRotate;
+                const rotateX = -((y - centerY) / centerY) * maxRotate;
+                card.style.transform = `perspective(800px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-6px)`;
+            };
+            const reset = () => {
+                rect = null;
+                card.style.transform = '';
+            };
+            card.addEventListener('mousemove', handleMove);
+            card.addEventListener('mouseleave', reset);
         });
     </script>
 </body>
